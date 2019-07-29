@@ -4,6 +4,7 @@ import Plagiarism from "../views/Teacher/Plagiarism";
 import Subject from "../views/Teacher/Subject";
 import Submissions from "../views/Teacher/Submissions";
 import TeacherProfile from "../views/Teacher/TeacherProfile";
+import Checksum from "../views/Teacher/Checksum";
 //Route Information for Logged in Teacher User
 var routes = [
   {
@@ -63,11 +64,18 @@ var routes = [
     layout: "/teacher"
   },
   {
+    path: "/checksum",
+    name: "Checksum",
+    icon: "ni ni-key-25 text-info",
+    component: Checksum,
+    layout: "/teacher"
+  },
+  {
     path: "/",
     name: "Profile",
     icon: "ni ni-key-25 text-info",
     component: TeacherProfile,
-    layout: "/student"
+    layout: "/teacher"
   }
 ];
 

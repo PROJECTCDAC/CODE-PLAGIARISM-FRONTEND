@@ -91,5 +91,3 @@ class Subject extends React.Component {
 }
 
 export default Subject;
-
-//ek pyaar ka nagma hai, zindagi aur kuch nahi teri meri kahani hai

@@ -126,7 +126,7 @@ class List extends React.Component {
                 isLoading: false,
                 submitted: true
               });
-              alert("Already Submitted");
+              alert("Assignment Submitted");
             }
           })
           .catch(error => {
@@ -134,7 +134,7 @@ class List extends React.Component {
             this.setState({
               isLoading: false
             });
-            alert("Please Try Again");
+            alert("Please Try Again! It seems Server Down");
           });
       })
       .catch(err => alert(err.message));

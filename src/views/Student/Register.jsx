@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
 import Loader from "react-loader-spinner";
-import { STUDENT_LOGIN } from "../../variables/Constant";
+import { STUDENT_REGISTER } from "../../variables/Constant";
 // reactstrap components
 import {
   Button,
@@ -51,9 +51,10 @@ class Register extends React.Component {
     //Validate the Input Fields
     if (!/\S+@\S+\.\S+/.test(this.state.email))
       this.setState({ authError: true, errorMessage: "Enter Valid Email" });
-    else if (!/^[0-9\b]+$/.test(this.state.prn))
-      this.setState({ authError: true, errorMessage: "Enter Valid PRN" });
     else this.setState({ authError: false, errorMessage: "" });
+
+    //else if (!/^[0-9\b]+$/.test(this.state.prn))
+    //  this.setState({ authError: true, errorMessage: "Enter Valid PRN" });
 
     if (this.state.password.length < 5)
       this.setState({ passwordStrength: "weak" });
@@ -62,7 +63,6 @@ class Register extends React.Component {
     if (
       this.state.email != null &&
       this.state.password != null &&
-      this.state.prn != null &&
       this.state.password != null &&
       this.state.passwordStrength === "strong"
     )
@@ -76,7 +76,6 @@ class Register extends React.Component {
     if (
       this.state.email != null &&
       this.state.password != null &&
-      this.state.prn != null &&
       this.state.password != null &&
       this.state.passwordStrength === "strong"
     )
@@ -89,7 +88,6 @@ class Register extends React.Component {
       let bodyFormData = new FormData();
       bodyFormData.set("email", this.state.email);
       bodyFormData.set("password", this.state.password);
-      bodyFormData.set("prn", this.state.prn);
       bodyFormData.set("name", this.state.name);
 
       let axiosConfig = {
@@ -101,10 +99,13 @@ class Register extends React.Component {
 
       //Method to Send Request to API and Process Response
       axios
-        .post(STUDENT_LOGIN, bodyFormData, axiosConfig)
+        .post(STUDENT_REGISTER, bodyFormData, axiosConfig)
         .then(result => {
           console.log(result.data);
-          if (result.data.status) {
+          if (result.data.message === "Success") {
+            alert(
+              "Hello " + result.data.name + " your PRN is: " + result.data.prn
+            );
             this.setState({ toRedirect: true, isLoading: false });
           }
         })
@@ -122,7 +123,7 @@ class Register extends React.Component {
 
   render() {
     if (this.state.toRedirect) {
-      return <Redirect to={"/slogin"} />;
+      return <Redirect to={"/student/slogin"} />;
     }
 
     return (
@@ -148,7 +149,14 @@ class Register extends React.Component {
                         <i className="ni ni-hat-3" />
                       </InputGroupText>
                     </InputGroupAddon>
-                    <Input placeholder="Name" type="text" />
+                    <Input
+                      placeholder="Name"
+                      type="text"
+                      name="name"
+                      ref={this.input}
+                      onChange={this.handleChange}
+                      required
+                    />
                   </InputGroup>
                 </FormGroup>
                 <FormGroup>
@@ -162,23 +170,6 @@ class Register extends React.Component {
                       placeholder="Email"
                       type="email"
                       name="email"
-                      ref={this.input}
-                      onChange={this.handleChange}
-                      required
-                    />
-                  </InputGroup>
-                </FormGroup>
-                <FormGroup>
-                  <InputGroup className="input-group-alternative mb-3">
-                    <InputGroupAddon addonType="prepend">
-                      <InputGroupText>
-                        <i className="ni ni-tag" />
-                      </InputGroupText>
-                    </InputGroupAddon>
-                    <Input
-                      placeholder="PRN Number"
-                      type="number"
-                      name="prn"
                       ref={this.input}
                       onChange={this.handleChange}
                       required

@@ -187,6 +187,12 @@ class Sidebar extends React.Component {
                   View Submissions
                 </NavLink>
               </NavItem>
+              <NavItem>
+                <NavLink to="/teacher/checksum" tag={NavLinkRRD}>
+                  <i className="ni ni-ui-04" />
+                  View Checksum
+                </NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
         </Container>

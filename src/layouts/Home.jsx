@@ -11,7 +11,8 @@ import { Button } from "reactstrap";
 class Home extends React.Component {
   componentDidMount() {
     document.body.classList.add("bg-default");
-    localStorage.setItem("isLogged", false);
+    if (localStorage.getItem("isLogged") != "true")
+      localStorage.setItem("isLogged", false);
   }
   componentWillUnmount() {
     document.body.classList.remove("bg-default");
@@ -44,7 +45,6 @@ class Home extends React.Component {
     ) {
       return <Redirect to={"/teacher/home"} />;
     }
-
     return (
       <>
         <div className="main-content">

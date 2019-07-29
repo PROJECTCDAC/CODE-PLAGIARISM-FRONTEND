@@ -70,10 +70,9 @@ class TLogin extends React.Component {
         .post(TEACHER_LOGIN, bodyFormData, axiosConfig)
         .then(result => {
           console.log(result.data);
-
           if (result.data.message === "Success") {
             //If user found
-            localStorage.setItem("name", result.data.name);
+            localStorage.setItem("name", result.data.email);
             localStorage.setItem("token", result.data.id);
             localStorage.setItem("isLogged", true);
             localStorage.setItem("user", "teacher");

@@ -16,8 +16,8 @@ import Notfound from "./views/Error";
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/auth" render={props => <AuthLayout {...props} />} />
       <Route exact path="/" render={props => <HomeLayout {...props} />} />
+      <Route path="/auth" render={props => <AuthLayout {...props} />} />
       <Route
         path="/student"
         render={props => <StudentDashboard {...props} />}
