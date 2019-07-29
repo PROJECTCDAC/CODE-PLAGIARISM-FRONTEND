@@ -1,5 +1,6 @@
 export const API_BASE_URL = "https://jsonplaceholder.typicode.com/posts";
-
+// FOR THE PURPOSE OF LOCAL SERVER
+/*
 //ENDPOINTS TO POST OR GET DATA
 export const STUDENT_REGISTER = "http://192.168.76.241:9090/studentregister";
 export const STUDENT_LOGIN = "http://192.168.76.241:9090/studentlogin";
@@ -16,9 +17,10 @@ export const FILE_UPLOAD = "http://192.168.76.241:2000/upload";
 export const FILE_GET = "http://192.168.76.241:2000/file";
 
 //export const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:8080/api';
+*/
 
 // FOR THE PURPOSE OF HEROKU
-/*
+
 //ENDPOINTS TO POST OR GET DATA
 export const STUDENT_LOGIN = "https://code-plagiarism-backend.herokuapp.com/studentlogin";
 export const TEACHER_LOGIN = "https://code-plagiarism-backend.herokuapp.com/teacherlogin";
@@ -31,4 +33,4 @@ export const SUBMISSIONS_POST = "https://code-plagiarism-backend.herokuapp.com/f
 //ENDPOINT TO UPLOAD OR DOWNLOAD FILE
 export const FILE_UPLOAD = "https://192.168.76.241:2000/upload";
 export const FILE_GET = "https://192.168.76.241:2000/file";
-*/
+
