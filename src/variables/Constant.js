@@ -24,7 +24,6 @@ export const FILE_GET = "http://192.168.76.241:2000/file";
 //ENDPOINTS TO POST OR GET DATA
 export const STUDENT_REGISTER = "https://code-plagiarism-backend.herokuapp.com/studentregister";
 export const STUDENT_LOGIN = "https://code-plagiarism-backend.herokuapp.com/studentlogin";
-export const STUDENT_LOGIN = "https://code-plagiarism-backend.herokuapp.com/studentlogin";
 export const TEACHER_LOGIN = "https://code-plagiarism-backend.herokuapp.com/teacherlogin";
 export const SUBJECT_POST = "https://code-plagiarism-backend.herokuapp.com/subjectAdd";
 export const SUBJECT_GET = "https://code-plagiarism-backend.herokuapp.com/subjectlist";
