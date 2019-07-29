@@ -28,7 +28,7 @@ export const TEACHER_LOGIN = "https://code-plagiarism-backend.herokuapp.com/teac
 export const SUBJECT_POST = "https://code-plagiarism-backend.herokuapp.com/subjectAdd";
 export const SUBJECT_GET = "https://code-plagiarism-backend.herokuapp.com/subjectlist";
 export const GENERATE_PLAGIARISM = "https://code-plagiarism-backend.herokuapp.com/percentage";
-export const CHECKSUM = "http://192.168.76.241:9090/checksum";
+export const CHECKSUM = "https://code-plagiarism-backend.herokuapp.com/checksum";
 export const SUBMISSIONS_GET = "https://code-plagiarism-backend.herokuapp.com/fileretrieve";
 export const SUBMISSIONS_POST = "https://code-plagiarism-backend.herokuapp.com/fileupload";
 
