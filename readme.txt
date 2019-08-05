@@ -9,6 +9,8 @@ Developed By:
 Technology:
     NodeJS and ReactJS
     
+Important:
+             Make necessary changes for communcation with Backend like IP and Port of Server in 'variables/Constant.jsx' file
     
 Process:
   1) Extract to Folder
