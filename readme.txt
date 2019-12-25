@@ -1,3 +1,5 @@
+[ Note: CODE-PLAGIARISM-BACKEND project is made Private, If you need access mail us at cdacpgproject@gmail.com ]
+
 Name: Code Anti-Plagiarism Detection System (PG-DAC-FEB-2019-ACTS-PUNE)
 Developed By:
           1) Swapnil S  
